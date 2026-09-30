@@ -11,7 +11,7 @@ export default function CaptionPage() {
   const generateCaption = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/captions", {
+      const res = await fetch("https://smart-social-media-toolkit.onrender.com/captions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
