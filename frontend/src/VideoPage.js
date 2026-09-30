@@ -11,7 +11,7 @@ export default function VideoPage() {
     try {
       const text = document.querySelector("input").value;
 
-      const res = await fetch("http://127.0.0.1:8000/video", {
+      const res = await fetch("https://smart-social-media-toolkit.onrender.com/video", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
