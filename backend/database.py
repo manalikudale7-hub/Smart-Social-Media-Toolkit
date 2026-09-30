@@ -1,0 +1,18 @@
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+# SQLite database file
+DATABASE_URL = "sqlite:///./database.db"
+
+# engine तयार
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False}  # SQLite साठी important
+)
+
+# session तयार
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# base class
+Base = declarative_base()
