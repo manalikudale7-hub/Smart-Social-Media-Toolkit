@@ -14,7 +14,7 @@ export default function HashtagPage() {
     setLoading(true);
     setCopied(false); // reset copy state
     try {
-      const res = await fetch("http://127.0.0.1:8000/hashtags", {
+      const res = await fetch("https://smart-social-media-toolkit.onrender.com/hashtags", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
